@@ -9,6 +9,7 @@ class App extends React.Component {
 
     this.state = {
       pets: [],
+      adoptedPets: [],
       filters: {
         type: 'all'
       }
@@ -39,7 +40,7 @@ class App extends React.Component {
     .then(pets => this.setState({pets}))
   }
 
-  handleAdoptPet = petId => {
+  handleAdoptPet = (petId) => {
     console.log("From App.js handleAdoptedPet", petId)
     this.setState({
       adoptedPets: [...this.state.adoptedPets, petId]
