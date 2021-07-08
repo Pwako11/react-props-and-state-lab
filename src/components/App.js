@@ -29,12 +29,11 @@ class App extends React.Component {
     let pet = this.state.filters.type
     let petUrl = url + `?type=${pet}` 
    
-    console.log("first url", url)
     if(this.state.filters.type !== 'all'){
       url = petUrl
     }
 
-    console.log("second url", url)
+    
     fetch(url)
     .then(res => res.json())
     .then(pets => this.setState({pets}))
@@ -48,6 +47,8 @@ class App extends React.Component {
   }
 
   render() {
+    const pets= this.state.pets
+    console.log(pets)
     return (
       <div className="ui container">
         <header>

@@ -5,7 +5,6 @@ class Filters extends React.Component {
   // constructor() {
   //   super();
 
-
   // }
 
   handleChange = e =>{
