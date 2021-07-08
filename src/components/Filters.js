@@ -2,11 +2,6 @@ import React from 'react'
 
 class Filters extends React.Component {
 
-  // constructor() {
-  //   super();
-
-  // }
-
   handleChange = e =>{
     this.props.onChangeType(e.target.value) 
   }
